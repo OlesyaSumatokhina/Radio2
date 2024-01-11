@@ -1,6 +1,6 @@
 public class Radio {
-    public int currentStation;
-    public int currentVolume;
+    private int currentStation;
+    private int currentVolume;
 
     public int getCurrentVolume() {
         return currentVolume;
@@ -23,8 +23,9 @@ public class Radio {
 
     public void setCurrentStation(int newStation) {
         if (newStation <= 9) {
-            if (newStation >= 0)
+            if (newStation >= 0) {
                 currentStation = newStation;
+            }
         }
     }
 
