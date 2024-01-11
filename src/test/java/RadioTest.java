@@ -13,16 +13,6 @@ public class RadioTest {
     }
 
     @Test
-    public void showCurrentStationQuantity() {
-        Radio radio = new Radio(20);
-        radio.setCurrentStation(15);
-        int actual = radio.getCurrentStation();
-        int expected = 15;
-        Assertions.assertEquals(actual, expected);
-
-    }
-
-    @Test
     public void showMinStation() {
         Radio radio = new Radio();
         radio.setCurrentStation(0);
@@ -75,22 +65,10 @@ public class RadioTest {
 
     }
 
-
     @Test
     public void nextZeroStation() {
         Radio radio = new Radio();
         radio.setCurrentStation(9);
-        radio.next();
-        int actual = radio.getCurrentStation();
-        int expected = 0;
-        Assertions.assertEquals(actual, expected);
-
-    }
-
-    @Test
-    public void nextZeroStationQuantity() {
-        Radio radio = new Radio(20);
-        radio.setCurrentStation(19);
         radio.next();
         int actual = radio.getCurrentStation();
         int expected = 0;
@@ -105,17 +83,6 @@ public class RadioTest {
         radio.prew();
         int actual = radio.getCurrentStation();
         int expected = 9;
-        Assertions.assertEquals(actual, expected);
-
-    }
-
-    @Test
-    public void prewStationQuantity() {
-        Radio radio = new Radio(20);
-        radio.setCurrentStation(0);
-        radio.prew();
-        int actual = radio.getCurrentStation();
-        int expected = 19;
         Assertions.assertEquals(actual, expected);
 
     }
